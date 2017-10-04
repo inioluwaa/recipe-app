@@ -1,18 +1,19 @@
 <div class="row">
   <div class="col-12">
-    <img src="" alt="" class="img-fluid">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-fluid"
+    style="max-height: 300px;">
   </div>
 </div>
 <div class="row">
   <div class="col-12">
-    <h1>Recipe Name</h1>
+    <h1>{{ recipe.name }}</h1>
   </div>
 </div>
 <div class="row">
   <div class="col-12">
     <div class="btn-group" dropdown>
       <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
-        Manage Recipes <span class="caret"></span>
+        Manage Recipe <span class="caret"></span>
       </button>
       <ul *dropdownMenu class="dropdown-menu" role="menu">
         <li role="menuitem"><a class="dropdown-item" href="#">To Shopping List</a></li>
@@ -24,7 +25,7 @@
 </div>
 <div class="row">
   <div class="col-12">
-    Description
+    {{ recipe.description }}
   </div>
 </div>
 <div class="row">
